@@ -1,0 +1,12 @@
+import os
+def main():
+	FileName = input("Enter the file name: ")
+
+	if(os.path.exists(FileName)):
+		os.remove(FileName)
+		print("File gets deleted")		
+
+	else:
+		print("There is no such path")
+if __name__ == "__main__":
+	main()

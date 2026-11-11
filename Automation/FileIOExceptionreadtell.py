@@ -1,0 +1,19 @@
+def main():
+	try:
+		fobj=open("Demo.txt","r")
+		print("File gets successfully opened")
+		#tell() method returns the current integer position of the file pointer (cursor) within a file stream
+		#tell() method returns the current offset in bytes from the beginning of the file
+		print("Current offset is :",fobj.tell())
+		Data = fobj.read(6)
+		print("Current offset is:",fobj.tell())
+
+		print("Data from file is:",Data)
+		fobj.close()
+	except FileNotFoundError:
+		print("Unable to open the file as there is no such file")
+	finally:
+		print("End of application")
+		fobj.close()
+if __name__ == "__main__":
+	main()
